@@ -7,17 +7,19 @@ hashtable.prototype.size = function(thing) {
 	return this.count;
 }
 
-hashtable.prototype.store = function(thing) {
-	this.items[thing] = thing;
-	this.count++;
+hashtable.prototype.store = function(obj) {
+	for(var x in obj) {
+		this.items[x] = obj[x];
+		this.count++;
+	}
 }
 
-hashtable.prototype.fetch = function(thing) {
-	return this.items[thing];
+hashtable.prototype.fetch = function(key) {
+	return this.items[key];
 }
 
-hashtable.prototype.remove = function(thing) {
-	this.items[thing] = undefined;
+hashtable.prototype.remove = function(key) {
+	this.items[key] = undefined;
 	this.count--;
 }
 
