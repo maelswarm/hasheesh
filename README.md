@@ -13,5 +13,6 @@ var obj = {"a": "apple", "b": "banana", "c": "cherry"};
 hashtable.store(obj)
 hashtable.remove("c")
 console.log(hashtable.fetch("a"));
+console.log(hashtable.hasitem("d"));
 console.log("Size: " + hashtable.size());
 ````

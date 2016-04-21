@@ -23,4 +23,8 @@ hashtable.prototype.remove = function(key) {
 	this.count--;
 }
 
+hashtable.prototype.hasitem = function(key) {
+	return this.items.hasOwnProperty(key);
+}
+
 module.exports = new hashtable;
